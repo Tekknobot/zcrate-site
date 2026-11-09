@@ -25,3 +25,10 @@
 @media(max-width:700px){.brand-logo{width:150px}.header-inner{gap:16px}.hero{flex-direction:column;align-items:flex-start;gap:28px}.hero-app{flex-basis:auto;display:flex;align-items:center;gap:16px;text-align:left}.hero-app img{width:88px}.hero-app>span{margin:0}.screenshot-caption{align-items:flex-start;flex-direction:column;gap:8px;padding:14px}.footer-logo{width:132px}}
 @media(max-width:390px){.brand-logo{width:125px}nav{gap:10px}}
 @media(max-width:390px){.header-inner{flex-wrap:wrap;justify-content:center;gap:2px;padding-block:10px}.header-inner nav{width:100%;justify-content:center;padding-block:6px}}
+
+/* Manual video walkthrough */
+.manual-video{margin:28px 0 0;border:1px solid var(--line);border-radius:10px;background:var(--panel);overflow:hidden}
+.manual-video video{display:block;width:100%;height:auto;background:#111513}
+.manual-video video:focus-visible{outline:2px solid var(--orange);outline-offset:-4px}
+.manual-video figcaption{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:14px 18px;font-size:12px;line-height:1.5;color:var(--muted);border-top:1px solid var(--line)}
+.manual-video figcaption a{color:var(--orange);text-decoration:underline;text-underline-offset:3px}

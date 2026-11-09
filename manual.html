@@ -1,4 +1,65 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#161918"><meta name="description" content="SAMPLE-01 manual: discover passages, build sample progressions, use controlled randomization, refine arrangements and export WAV audio."><title>Manual — SAMPLE-01 | Zillatronics</title><link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="apple-touch-icon" href="assets/app_icon_512x512.png"><link rel="stylesheet" href="styles.css"></head><body><header class="site-header"><div class="shell header-inner"><a class="brand" href="index.html" aria-label="SAMPLE-01 home"><img class="brand-logo" src="assets/logotype.png" alt="SAMPLE-01" width="1400" height="194"></a><nav aria-label="Main navigation"><a href="index.html#workflow">Workflow</a><a href="manual.html">Manual</a><a href="index.html#availability">Release</a></nav></div></header><main><section class="manual-hero shell"><div class="kicker">DOCUMENTATION <span> / WORKING MANUAL</span></div><h1>SAMPLE-01 <span>/ MANUAL</span></h1><p>Turn your recording collection into musical ideas with passage discovery, sample progressions, controlled randomization and the multi-clip editor. This manual describes the current development build; interface labels and behavior may change before release.</p></section><div class="manual-layout shell"><aside class="manual-nav" aria-label="Manual contents"><div class="manual-nav-title">CONTENTS</div><a href="#start">01 &nbsp; Getting started</a><a href="#discover">02 &nbsp; Discover passages</a><a href="#editor">03 &nbsp; Sample editor</a><a href="#randomization">04 &nbsp; Controlled randomization</a><a href="#progressions">05 &nbsp; Sample progressions</a><a href="#export">06 &nbsp; Export WAV</a><a href="#notes">07 &nbsp; Notes & limitations</a></aside><div class="manual-content">
+<!doctype html><html lang="en" prefix="og: https://ogp.me/ns#"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161918">
+  <title>SAMPLE-01 Manual — Progressions, Editing &amp; WAV Export</title>
+  <meta name="description" content="Learn SAMPLE-01: index recordings, discover passages, build sample progressions, use randomization locks, edit loops and export WAV audio. Includes video guides.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://sample-01-manual.vercel.app/manual.html">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/app_icon_512x512.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Social link previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SAMPLE-01">
+  <meta property="og:title" content="SAMPLE-01 Manual — Build your next musical idea">
+  <meta property="og:description" content="Learn SAMPLE-01: index recordings, discover passages, build sample progressions, use randomization locks, edit loops and export WAV audio. Includes video guides.">
+  <meta property="og:url" content="https://sample-01-manual.vercel.app/manual.html">
+  <meta property="og:image" content="https://sample-01-manual.vercel.app/assets/sample-01-social.jpg">
+  <meta property="og:image:secure_url" content="https://sample-01-manual.vercel.app/assets/sample-01-social.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SAMPLE-01: Turn recordings into new musical ideas, with the waveform editor and sample progression workspace.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SAMPLE-01 Manual — Build your next musical idea">
+  <meta name="twitter:description" content="Learn SAMPLE-01: index recordings, discover passages, build sample progressions, use randomization locks, edit loops and export WAV audio. Includes video guides.">
+  <meta name="twitter:image" content="https://sample-01-manual.vercel.app/assets/sample-01-social.jpg">
+  <meta name="twitter:image:alt" content="SAMPLE-01: Turn recordings into new musical ideas, with the waveform editor and sample progression workspace.">
+
+  <!-- Structured data describes the app without inventing ratings or purchase availability. -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "WebPage",
+        "TechArticle"
+      ],
+      "@id": "https://sample-01-manual.vercel.app/manual.html#webpage",
+      "url": "https://sample-01-manual.vercel.app/manual.html",
+      "name": "SAMPLE-01 Manual — Progressions, Editing & WAV Export",
+      "description": "Learn SAMPLE-01: index recordings, discover passages, build sample progressions, use randomization locks, edit loops and export WAV audio. Includes video guides.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://sample-01-manual.vercel.app/#website"
+      },
+      "about": {
+        "@id": "https://sample-01-manual.vercel.app/#app"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://sample-01-manual.vercel.app/assets/sample-01-social.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    }
+  ]
+}
+  </script>
+</head><body><header class="site-header"><div class="shell header-inner"><a class="brand" href="index.html" aria-label="SAMPLE-01 home"><img class="brand-logo" src="assets/logotype.png" alt="SAMPLE-01" width="1400" height="194"></a><nav aria-label="Main navigation"><a href="index.html#workflow">Workflow</a><a href="manual.html">Manual</a><a href="index.html#availability">Release</a></nav></div></header><main><section class="manual-hero shell"><div class="kicker">DOCUMENTATION <span> / WORKING MANUAL</span></div><h1>SAMPLE-01 <span>/ MANUAL</span></h1><p>Turn your recording collection into musical ideas with passage discovery, sample progressions, controlled randomization and the multi-clip editor. This manual describes the current development build; interface labels and behavior may change before release.</p></section><div class="manual-layout shell"><aside class="manual-nav" aria-label="Manual contents"><div class="manual-nav-title">CONTENTS</div><a href="#start">01 &nbsp; Getting started</a><a href="#discover">02 &nbsp; Discover passages</a><a href="#editor">03 &nbsp; Sample editor</a><a href="#randomization">04 &nbsp; Controlled randomization</a><a href="#progressions">05 &nbsp; Sample progressions</a><a href="#export">06 &nbsp; Export WAV</a><a href="#notes">07 &nbsp; Notes & limitations</a></aside><div class="manual-content">
 <section id="start"><span class="manual-section-no">01 / LIBRARY</span><h2>Getting started</h2><p>SAMPLE-01 connects passage discovery, sample progressions and editing to help you create musical ideas from complete recordings. It is designed for large sample collections, saving the time of loading each track into a DAW and assembling every clip by hand. The same workflow works with smaller collections, too.</p><p>Add a folder containing your existing audio recordings, then use the library indexing controls to scan a batch or your full collection. The left-hand Songs panel lets you search and choose source recordings.</p><div class="manual-tip"><strong>Working locally.</strong> SAMPLE-01 is designed around recordings stored on your computer. Keep your original library backed up and test new releases on a small folder first.</div></section>
 <section id="discover"><span class="manual-section-no">02 / DISCOVER</span><h2>Find passages</h2><p>Use the Library panel to browse automatically proposed segments. Filter by passage length, tempo and musical key; choose the available key source when needed. Click a passage to audition it.</p><p>Passage timing, tempo and musical key are estimates. A candidate is not guaranteed to start at a perfect bar boundary or be musically suitable. Use your ears to decide.</p>
 <figure class="manual-video">

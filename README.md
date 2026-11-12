@@ -1,10 +1,10 @@
-# SAMPLE-01 site
+# SAMPLE-01 documentation
 
-Lightweight static website for SAMPLE-01 by Zillatronics.
+Static user guide and workflow reference for SAMPLE-01 by Zillatronics.
 
 ## Pages
-- `index.html` — musical idea generation, sample progressions, controlled randomization, workflow, workspace screenshot and release status.
-- `manual.html` — working manual with passage and editor videos, randomization locks and progression-to-editor guidance.
+- `index.html` — documentation overview, workspace screenshot, core controls and basic workflow.
+- `manual.html` — written instructions for passage discovery, editing, randomization, progressions and WAV export.
 - `privacy.html` — app-only privacy policy for SAMPLE-01.
 - `styles.css` — shared responsive styles.
 
@@ -24,7 +24,7 @@ Upload the folder contents to any static host. No build step is required.
 ## Search and social sharing
 The production URL is `https://sample-01-manual.vercel.app/`.
 
-Each page includes its own title, description, canonical URL, Open Graph tags, and X large-image card tags. The homepage includes WebSite, Organization, and SoftwareApplication structured data. The app is marked as in development; no ratings or currently available purchase offer are asserted. `robots.txt` permits crawling and points to the three-page `sitemap.xml`.
+Each page includes its own title, description, canonical URL, Open Graph tags, and X large-image card tags. The homepage includes TechArticle, WebSite, Organization, and SoftwareApplication structured data describing the documentation and its subject. `robots.txt` permits crawling and points to the three-page `sitemap.xml`.
 
 The social card uses the supplied logotype and app screenshot as references. It was created with the built-in ImageGen tool and exported as a 1200 × 630 JPEG. The generation prompt is in `social-card-prompt.txt`.
 

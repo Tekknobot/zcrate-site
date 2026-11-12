@@ -3,7 +3,7 @@
 Lightweight static website for SAMPLE-01 by Zillatronics.
 
 ## Pages
-- `index.html` — musical idea generation, sample progressions, controlled randomization, workflow, workspace screenshot and planned release price.
+- `index.html` — musical idea generation, sample progressions, controlled randomization, workflow, workspace screenshot and release status.
 - `manual.html` — working manual with passage and editor videos, randomization locks and progression-to-editor guidance.
 - `privacy.html` — app-only privacy policy for SAMPLE-01.
 - `styles.css` — shared responsive styles.

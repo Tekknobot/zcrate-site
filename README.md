@@ -1,34 +1,47 @@
-# SAMPLE-01 documentation
+# SAMPLE-01 field manual
 
-Static user guide and workflow reference for SAMPLE-01 by Zillatronics.
+Searchable documentation for **SAMPLE-01 1.1.0 (7), development build**, checked against app source revision `a4dc2cd` on 16 November 2026. This edition covers the sample editor, library, synths, drums, mixer, arrangement, projects and export. Earlier app builds differ.
 
-## Pages
-- `index.html` — documentation overview, feature overview video, core controls and basic workflow.
-- `manual.html` — written instructions for passage discovery, editing, randomization, progressions and WAV export.
-- `privacy.html` — app-only privacy policy for SAMPLE-01.
-- `styles.css` — shared responsive styles.
+The design follows the ZPUNK and CHIPTUNES manuals, with SAMPLE-01's logotype and charcoal/amber palette. The site remains documentation: no checkout, pricing or store links. The existing Overview video stays on the welcome page; chapters use screenshots and written instructions.
 
-## Assets
-- `assets/sample-01-wordmark.png` — product wordmark.
-- `assets/zillatronics-logo.png` — original supplied logo, retained as a source asset.
-- `assets/app_icon_512x512.png` — hero app icon and Apple touch icon.
-- `assets/Overview.mp4` — feature overview video on the homepage.
-- `assets/Screenshot.png` — video poster and workspace screenshot referenced in structured data.
-- `assets/favicon.svg` — browser favicon.
-- `assets/sample-01-social.jpg` — 1200 × 630 social sharing card (JPEG).
-- `assets/logotype.png` — SAMPLE-01 logotype used in both page headers and footers.
+## Preview and check
 
-## Preview and deploy
-Run `python3 -m http.server 8000` from this directory and open http://localhost:8000.
-Upload the folder contents to any static host. No build step is required.
+Requires Node.js 20 or newer. No npm dependencies or installation step.
 
-## Search and social sharing
-The production URL is `https://sample-01-manual.vercel.app/`.
+```sh
+npm run dev
+npm run check
+npm run build
+```
 
-Each page includes its own title, description, canonical URL, Open Graph tags, and X large-image card tags. The homepage includes TechArticle, WebSite, Organization, and SoftwareApplication structured data describing the documentation and its subject. `robots.txt` permits crawling and points to the three-page `sitemap.xml`.
+Preview: <http://127.0.0.1:4175>. Build output: `dist/` (ignored by Git). To preview the production output, run `PREVIEW_DIR=dist npm run dev` after building. The build regenerates the static welcome content, complete manual and privacy page before checking links, assets and metadata.
 
-The social card uses the supplied logotype and app screenshot as references. It was created with the built-in ImageGen tool and exported as a 1200 × 630 JPEG. The generation prompt is in `social-card-prompt.txt`.
+## Content and layout
 
-Deploy the updated HTML, `styles.css`, `robots.txt`, `sitemap.xml`, and the referenced assets, including `assets/Overview.mp4` and `assets/sample-01-social.jpg`, together to Vercel. These local changes take effect on the public site only after deployment. Social services may retain previous previews until they recrawl the link. If the public domain changes, update the absolute URLs in all three HTML files, `robots.txt`, and `sitemap.xml`.
+- `manual/content.mjs`: 23 routes in five groups; chapter copy, screenshot captions and legacy route mappings.
+- `manual/ui.mjs`: welcome page and shared icons.
+- `manual/app.js`: routing, search, contents, keyboard navigation and screenshot previews.
+- `manual/styles.css`: shared desktop, tablet, phone and print styles.
+- `manual/fonts/`: bundled Inter font and its license; no external font request.
+- `index.html`: page shell, metadata and a generated static welcome page.
+- `manual.html`: generated complete text edition, readable without JavaScript. With JavaScript, old manual anchors open the corresponding chapter.
+- `privacy.html`: generated app-only privacy policy. No email address is listed.
+- `scripts/render-pages.mjs`: shared generation for the static HTML editions.
 
-Metadata references: [Open Graph](https://ogp.me/) and [Google canonical URL guidance](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls).
+Edit chapter copy in `manual/content.mjs`, not generated `manual.html` or `privacy.html`. Run `npm run build` after changing copy. Hash URLs such as `/#/arrangement/edit` can be shared directly and do not need a server rewrite.
+
+## Images and video
+
+`assets/manual/` contains six 1600 × 1000 screenshots of the actual 1.1.0 (7) workspace. They were captured through the app's local frontend using a separate demo index and generated audio; personal libraries, projects and recovery data were not used. See the capture notes in that folder.
+
+`assets/Overview.mp4` is the existing homepage video. Its poster is `assets/Screenshot.png`; both may show earlier controls. `assets/logotype.png` supplies the header brand, and the original icon/favicon and source assets are retained.
+
+The existing `assets/sample-01-social.jpg` is the 1200 × 630 share card, using the supplied branding and earlier workspace image. Its original ImageGen prompt remains in `social-card-prompt.txt`.
+
+## Vercel and search previews
+
+Production URL: <https://sample-01-manual.vercel.app/>.
+
+`vercel.json` specifies `npm run build` and output directory `dist`. The site has no runtime service or package dependencies. Commit and deploy through the existing GitKraken/Vercel workflow. Local changes do not update the public site until deployed; this update does not create a new hosting project.
+
+The three HTML entry points contain canonical links, descriptions, Open Graph/X share tags and structured data. `robots.txt` points to the three-entry `sitemap.xml`. Search engines can read the complete manual without running JavaScript. If the domain changes, update `index.html`, `scripts/render-pages.mjs`, `robots.txt` and `sitemap.xml`, then rebuild. Sharing services may cache previous previews until they recrawl.

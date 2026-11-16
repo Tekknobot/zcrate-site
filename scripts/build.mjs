@@ -1,0 +1,11 @@
+import {cp,mkdir,rm} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {spawnSync} from 'node:child_process';
+import {renderPages} from './render-pages.mjs';
+const root=new URL('../',import.meta.url),dist=new URL('dist/',root);
+await renderPages(root);
+const check=spawnSync(process.execPath,['scripts/check-manual.mjs'],{cwd:fileURLToPath(root),stdio:'inherit'});
+if(check.status!==0)process.exit(check.status||1);
+await rm(dist,{recursive:true,force:true});await mkdir(dist);
+for(const name of ['index.html','manual.html','privacy.html','robots.txt','sitemap.xml','assets','manual'])await cp(new URL(name,root),new URL(name,dist),{recursive:true});
+console.log('Built static manual in dist/.');

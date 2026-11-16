@@ -1,0 +1,10 @@
+{
+  "name": "sample-01-field-manual",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check-manual.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}

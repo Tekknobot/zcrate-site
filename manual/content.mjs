@@ -4,7 +4,7 @@ const tip = (title, text) => `<aside class="callout"><span aria-hidden="true">�
 const steps = items => `<ol class="steps">${items.map(([title, text]) => `<li><div><h3>${title}</h3><p>${text}</p></div></li>`).join('')}</ol>`;
 const table = (heads, rows) => `<div class="table-wrap" tabindex="0" role="region" aria-label="${heads.join(' and ')}"><table><thead><tr>${heads.map(h => `<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(row => `<tr>${row.map((v, i) => i ? `<td>${v}</td>` : `<th scope="row">${v}</th>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 
-const captureNote = 'SAMPLE-01 1.1.0 (7) development build · Generated demo audio';
+const captureNote = 'SAMPLE-01 1.1.0 (7) · Generated demo audio';
 export const screens = [
   { id: 'editor', file: '01-editor.png', title: 'Sample editor', caption: 'Arrange passages, build a new idea and refine a short sample sequence. Current 1.1.0 build 7 interface with generated demo audio.', color: 'orange' },
   { id: 'arrangement', file: '02-arrangement.png', title: 'Arrangement', caption: 'Place reusable patterns on a longer song timeline. Current 1.1.0 build 7 interface with generated demo audio.', color: 'purple' },
@@ -38,7 +38,7 @@ export const pages = {
     sections: [
       section('start', 'Start with a collection',
         p('SAMPLE-01 is built for exploring large sample collections without spending time dropping each individual track into a DAW. It also works with smaller collections: choose a folder, index the recordings and audition musical passages in one place.') +
-        tip('Development build manual', 'This guide covers the current local 1.1.0 (7) development build. Its synths, drums, mixer and arrangement features may differ from earlier builds. <a href="#/about">About this edition →</a>') +
+        tip('Version 1.1.0 manual', 'This guide covers SAMPLE-01 1.1.0 (7). Its synths, drums, mixer and arrangement features may differ from earlier builds. <a href="#/about">About this edition →</a>') +
         steps([
           ['Choose a folder', 'Use <b>File → Choose SAMPLE Folder…</b>, or open <b>Index library · batch or all songs</b> in Library and choose <b>Choose folder…</b>.'],
           ['Index a first batch', 'Choose <b>Scan next 10</b> for a manageable start, or <b>Scan all songs</b> for the folder. The app reads FLAC, MP3 and WAV files without changing the originals.'],
@@ -490,7 +490,7 @@ export const pages = {
     description: 'Explore the current interface. Select any screenshot to see it at full size.', time: '6 VIEWS',
     sections: [
       section('samples', 'Find and shape sample material',
-        p('These screenshots show the current 1.1.0 (7) development interface with generated demo audio, rather than personal recordings. The native macOS menu bar is not shown.') + screen('editor') + screen('library')),
+        p('These screenshots show the 1.1.0 (7) interface with generated demo audio, rather than personal recordings. The native macOS menu bar is not shown.') + screen('editor') + screen('library')),
       section('instruments', 'Build accompanying parts', screen('synths') + screen('drums')),
       section('finish', 'Arrange and balance', screen('arrangement') + screen('mixer'))
     ]
@@ -516,14 +516,14 @@ export const pages = {
     title: 'About this manual', icon: 'info', label: 'REFERENCE',
     description: 'The build covered by this guide and the scope of its examples.', time: '2 MIN READ',
     sections: [
-      section('edition', 'Current development edition',
-        p('This manual documents the local <b>SAMPLE-01 1.1.0 (7) development build</b>. It was checked against source revision <code>a4dc2cd</code> on <b>16 November 2026</b>. Features and interface details can change as development continues.') +
+      section('edition', 'Version 1.1.0 edition',
+        p('This manual covers <b>SAMPLE-01 1.1.0 (7)</b>, including sample editing, synthesized instruments and drums, mixing, arrangements, projects and exports.') +
         tip('Check the build you are using', 'This guide covers the expanded Editor, Arrangement, Synths, Drums and Mixer workflow. Earlier builds may have different controls or may not include every feature shown here.')),
       section('purpose', 'A guide to using the app',
         p('SAMPLE-01 helps turn a collection of recordings into playable passages and editable musical ideas. Indexing and auditioning a large collection in one place reduces the repeated work of dropping individual tracks into a DAW. The same tools are useful with a small, focused collection.') +
         p('This site is documentation. Its chapters explain the app’s controls, local file workflow and export formats. Keyboard shortcuts and File-menu instructions refer to the native macOS app.')),
       section('examples', 'Screenshots and estimates',
-        p('The current screenshots use generated demo audio and show the development interface. They do not contain personal recordings. Select a screenshot to enlarge it; the <a href="#/screens">interface gallery</a> collects all six views.') +
+        p('The current screenshots use generated demo audio and show the SAMPLE-01 1.1.0 interface. They do not contain personal recordings. Select a screenshot to enlarge it; the <a href="#/screens">interface gallery</a> collects all six views.') +
         p('Tempo, passage boundaries and key are heuristic estimates. The guide explains what those estimates mean so you can use them as starting points and confirm the result by listening. <a href="#/privacy">Read the app privacy policy →</a>'))
     ]
   }

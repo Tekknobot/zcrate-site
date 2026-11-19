@@ -1,6 +1,6 @@
 # SAMPLE-01 field manual
 
-Searchable documentation for **SAMPLE-01 1.1.0 (7), development build**, checked against app source revision `a4dc2cd` on 16 November 2026. This edition covers the sample editor, library, synths, drums, mixer, arrangement, projects and export. Earlier app builds differ.
+Searchable documentation for **SAMPLE-01 1.1.0 (7)**. The chapter content was checked against app source revision `a4dc2cd` on 16 November 2026; release wording and the public support contact were updated on 19 November 2026. This edition covers the sample editor, library, synths, drums, mixer, arrangement, projects and export. Earlier app builds differ.
 
 The design follows the ZPUNK and CHIPTUNES manuals, with SAMPLE-01's logotype and charcoal/amber palette. The site remains documentation: no checkout, pricing or store links. The existing Overview video stays on the welcome page; chapters use screenshots and written instructions.
 
@@ -25,7 +25,7 @@ Preview: <http://127.0.0.1:4175>. Build output: `dist/` (ignored by Git). To pre
 - `manual/fonts/`: bundled Inter font and its license; no external font request.
 - `index.html`: page shell, metadata and a generated static welcome page.
 - `manual.html`: generated complete text edition, readable without JavaScript. With JavaScript, old manual anchors open the corresponding chapter.
-- `privacy.html`: generated app-only privacy policy. No email address is listed.
+- `privacy.html`: generated app-only privacy policy. All page footers link to the public support email, `zillatronics@gmail.com`.
 - `scripts/render-pages.mjs`: shared generation for the static HTML editions.
 
 Edit chapter copy in `manual/content.mjs`, not generated `manual.html` or `privacy.html`. Run `npm run build` after changing copy. Hash URLs such as `/#/arrangement/edit` can be shared directly and do not need a server rewrite.
